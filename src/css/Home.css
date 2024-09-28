@@ -1,0 +1,124 @@
+/* src/css/Home.css */
+.Home-section {
+  padding: 80px 100px;
+  background: url('../Image/main.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.Home-section .container {
+  max-width: 440px; /* Set a smaller maximum width for the container */
+  width: 100%; /* Make the container responsive */
+  box-sizing: border-box; /* Ensure padding and borders are included in width calculations */
+
+}
+
+.Home-section h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  text-align: left; /* Align text to the left */
+}
+
+.Home-section p {
+  font-size: 1rem;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  text-align: left; /* Align text to the left */
+}
+
+.learn-more-button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1rem;
+  color: white;
+  background-color: #ff5722; /* Orange background color */
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-top: 20px;
+  text-align: center; /* Center align text within button */
+}
+
+.learn-more-button:hover {
+  background-color: #7e280d; /* Darker orange on hover */
+  transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+.learn-more-button:focus {
+  box-shadow: 0 0 0 3px rgba(255, 165, 0, 0.5); /* Add focus outline */
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .Home-section {
+    padding: 60px 100px; /* Adjust padding for tablets */
+  }
+
+  .Home-section .container {
+    max-width: 350px; /* Adjust maximum width for tablets */
+    padding: 0 0px; /* Reduce padding on smaller screens */
+  }
+
+  .Home-section h1 {
+    font-size: 1.75rem; /* Adjust font size for tablets */
+  }
+
+  .Home-section p {
+    font-size: 0.9rem; /* Adjust font size for tablets */
+  }
+
+  .learn-more-button {
+    font-size: 0.9rem; /* Adjust button font size for tablets */
+    padding: 10px 22px; /* Adjust button padding for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .Home-section {
+    padding: 40px 20px; /* Adjust padding for mobile screens */
+  }
+
+  .Home-section .container {
+    max-width: 300px; /* Further adjust maximum width for mobile screens */
+    padding: 0 5px; /* Further reduce padding on mobile screens */
+  }
+
+  .Home-section h1 {
+    font-size: 1.5rem; /* Adjust font size for mobile screens */
+  }
+
+  .Home-section p {
+    font-size: 0.875rem; /* Adjust font size for mobile screens */
+  }
+
+  .learn-more-button {
+    font-size: 0.875rem; /* Adjust button font size for mobile screens */
+    padding: 8px 18px; /* Adjust button padding for mobile screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .Home-section {
+    padding: 30px 20px; /* Further reduce padding for very small screens */
+  }
+
+  .Home-section .container {
+    max-width: 200px; /* Allow container to use full width on very small screens */
+    padding: 0; /* Remove padding on very small screens */
+  }
+
+  .Home-section h1 {
+    font-size: 1.25rem; /* Adjust font size for very small screens */
+  }
+
+  .Home-section p {
+    font-size: 0.75rem; /* Adjust font size for very small screens */
+  }
+
+  .learn-more-button {
+    font-size: 0.75rem; /* Adjust button font size for very small screens */
+    padding: 6px 16px; /* Adjust button padding for very small screens */
+  }
+}

@@ -1,0 +1,141 @@
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #333; /* Dark shade for header background */
+  color: #fff;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for background and shadow */
+}
+
+.header .container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 100px; /* Adjusted padding for better responsiveness */
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+.logo {
+  font-size: 1.5rem;
+}
+.logo-image {
+  height: 40px; /* Set a specific height for the logo */
+  margin-right: auto; /* Push the menu to the right */
+}
+
+.menu-toggle {
+  display: none; /* Hidden by default */
+  cursor: pointer;
+  font-size: 2rem; /* Increased size for better visibility */
+  color: #fff; /* White color for the icon */
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Default to horizontal layout */
+}
+
+.nav-item {
+  margin: 0 20px; /* Increased margin for spacing */
+  position: relative; /* For positioning the hover effects */
+}
+
+.nav-item a {
+  color: #fff; /* Default text color */
+  text-decoration: none; /* Remove default underline */
+  font-size: 16px;
+  transition: color 0.3s, transform 0.3s; /* Smooth transition for color and transform */
+}
+
+.nav-item a:hover {
+  color: #ff6600; /* Change text color on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+.nav-item::after {
+  content: ''; /* Pseudo-element for the underline effect */
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 0;
+  height: 4px; /* Thickness of the underline */
+  background-color: #ff6600; /* Color of the underline */
+  transition: width 0.3s; /* Smooth transition for the underline width */
+}
+
+.nav-item:hover::after {
+  width: 100%; /* Full width underline on hover */
+}
+
+.nav-item a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px; /* Slightly larger font size */
+  transition: color 0.3s, transform 0.3s; /* Smooth transition for color and transform */
+}
+
+.nav-item a:hover,
+.nav-item a.active {
+  color: #ff6f00; /* Orange color for active/hover effect */
+  transform: scale(1.1); /* Slight scaling effect on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .header .container {
+    padding: 0 20px; /* Adjusted padding for mobile view */
+  }
+
+  .nav {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+    justify-content: space-evenly;
+  }
+
+  .menu-toggle {
+    display: block; /* Show the menu toggle on small screens */
+    position: absolute;
+    top: 8px; /* Adjust top position */
+    right: 20px; /* Right alignment */
+  }
+
+  .nav-list {
+    display: none; /* Hide by default */
+    flex-direction: column; /* Stack items vertically */
+    width: 100%;
+    background-color: #333; /* Matching dark background */
+    position: absolute;
+    top: 60px; /* Position below the header */
+    left: 0;
+    transition: max-height 0.3s ease; /* Smooth transition for showing */
+    max-height: 0; /* Start collapsed */
+    overflow: hidden; /* Hide overflow when collapsed */
+  }
+
+  .nav-list.open {
+    display: flex; /* Show when open */
+    max-height: 500px; /* Arbitrary large value to allow for content */
+  }
+
+  .nav-item {
+    margin: 10px 0; /* Adjust margin for vertical spacing */
+    text-align: center; /* Center align items */
+  }
+
+  .nav-item a {
+    font-size: 20px; /* Increased font size for readability */
+  }
+}
+
+.header:hover {
+  background-color: #222; /* Darker shade on hover for the header */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
+}

@@ -1,0 +1,13 @@
+/* src/css/animations.css */
+
+.pop-up {
+    opacity: 0; /* Initial state (hidden) */
+    transform: translateY(30px); /* Start with a larger offset */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Smooth and slightly slower transition */
+  }
+  
+  .pop-up.active {
+    opacity: 1; /* Final state (visible) */
+    transform: translateY(0); /* Move to final position */
+  }
+  
